@@ -1,0 +1,573 @@
+
+/*ATRIBUTOS ESPECIFICOS*/
+
+
+
+
+
+
+body{
+    background-color: rgb(24, 23, 23);
+    color: black;
+
+    }
+    
+    p{
+        font-style: inherit;
+    }
+
+
+
+
+
+/* ====== RESET BÁSICO ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== BARRA DE NAVEGACIÓN ====== */
+.nav {
+  background: #000;
+  display: flex;            /* ← activa Flexbox */
+  align-items: center;      /* centra verticalmente */
+  padding: 8px 30px;
+  justify-content: center;
+ 
+}
+
+/* Título a la izquierda */
+.tituloh1 {
+  font-size: 40px;
+  font-family: "Anton SC", sans-serif;
+  color: #fff;
+    /* ← empuja lo demás a la derecha */
+  text-decoration: none;
+  white-space: nowrap;
+   margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Menú (ul) a la derecha */
+.nav-links {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  background-color: #19191b;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Enlaces */
+.nav-links a {
+  color: rgb(223, 208, 184);
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: opacity 0.2s ease;
+ 
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Opcional: distribuye los LI en línea (no es necesario con flex) */
+.nav-links li { display: inline; }
+
+/* ====== HAMBURGUESA RESPONSIVE (opcional) ====== */
+.menu-icon-action {         /* oculto en escritorio */
+  display: none;
+  cursor: pointer;
+}
+
+/* Pantallas ≤ 768 px: muestra hamburguesa y colapsa menú 
+@media (max-width: 768px) {
+  .menu-icon-action { display: block; }
+
+  /* menú vertical oculto por defecto 
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background: #000;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+
+.nav-links a:hover{
+border-bottom: 2px solid white;
+
+}
+
+.menu-icon-action{
+display: block;
+
+}
+
+#menu-icon{
+
+  display: block;
+}
+
+
+  /* cuando se marque el checkbox, se despliega 
+  #menu-toggle:checked + label + .nav-links {
+    transform: scaleY(1);
+  }
+}*/
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.carrusel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 7%;
+}
+
+.tituloh2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+margin-right: 6px;
+}
+
+.carrusel-track {
+  display: flex;
+  width: calc(200%); /* si duplicás las 8 imágenes = 16 */
+  animation:  deslizar 35s  infinite alternate;
+   animation-play-state: running;
+}
+
+.elemento {
+  flex: 0 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   animation-play-state: running;
+}
+
+.imgc {
+  height: 300px;       /* o el alto que prefieras */
+  width: auto;         /* ancho se ajusta automáticamente */
+  display: block;
+}
+
+
+
+/* Animación del carrusel */
+@keyframes deslizar {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-100%); }
+  75%  { transform: translateX(-200%); }
+  
+}
+
+/*Acá termina el carrusel*/
+
+.Los-mas-pedidos{
+    background-color: #1e1f20;
+    color: #3B4D61;
+}
+
+
+.inspirados{
+color: rgb(250, 245, 237);
+margin-top: 30px;
+margin-bottom: 30px;
+justify-content: center;
+align-items: center;
+
+margin-right: 70px;
+}
+
+.empretienda{
+justify-content: space-evenly;
+justify-items:center;
+align-items: center;
+align-self: stretch;
+border: 1px solid black;
+box-shadow: inset;
+
+}
+
+.empretienda img{
+width: 200px;
+height: auto;
+
+}
+
+.texto-inicial{
+  color: white;
+    background-color: black;
+    border: 1px solid black;
+    opacity: 0.6;
+    width: 35%;
+   margin: auto;
+flex-wrap: nowrap;
+display: flex;}
+
+.texto-inicial-uno{
+background: url(/assets/gallaprimerplano.webp) no-repeat center fixed;
+border: 2px groove black;
+background-size:contain;
+flex-wrap: nowrap;
+box-sizing: border-box;}
+
+
+.textovideo{
+  background-color: #1e1f20  ;
+margin-top: 40px;
+font-size: 20px;
+}
+
+
+.ultcancion{
+margin-top: 15px;
+color: rgb(151, 151, 151);
+}
+
+.video{margin-top: 30px;}
+
+
+
+.oasises{color: antiquewhite;
+margin-top: 20px;
+margin-bottom: 30px;
+display: block;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.Entrevistador{
+  margin-top: 40px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: white;
+align-items: center;
+justify-content: center;
+display: block;
+}
+
+
+.gif{
+
+display: flex;
+align-items: center;
+justify-content: center;
+width: 20%;
+height: 20%;
+margin-left: 40%;}
+
+
+.gifimg{
+ width: 400px;
+    height: auto;
+    
+
+}
+
+.dedicatoria{
+  margin-top: 80px;
+color: wheat;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+.whatsthestory{height: 30%; width: 30%;}
+
+
+/*ATRIBUTOS GENERALES*/
+
+
+h1, h2, h3 {color: white;}
+
+ img{
+        float: inline-start;
+    width: 400px;
+    height: 400px;
+      justify-content: space-between;
+    }
+
+     p{
+        font-style: inherit;
+        text-align: center;
+    }
+
+    div {
+display: flex;
+align-items: center;
+justify-content: center;
+
+  }
+
+div{text-align: center;}
+
+
+  
+    a{
+    text-decoration: none;
+    color: rgb(223, 208, 184);
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+
+
+    /*RESPONSIVE*/
+
+ @media (max-width: 852px) {
+  /* Estilos para pantallas con un ancho máximo de 768px (tabletas y móviles) */
+  
+.header{
+height: 30px;
+width: 10px;
+}
+
+.tituloh1{font-size: 25px;
+margin-right: 30px;
+}
+
+
+.nav {
+    background: #000;
+    display: flex
+;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+
+.nav-links {
+  font-size: 10px;
+    display: flex;
+    gap: 10px;}
+
+
+    .nav-links li {
+    display: inline;
+font-size: 10px;
+
+}
+
+.nav-links a{
+  font-size: 17px;
+  margin-left: 50px;
+}
+
+
+.tituloh2{
+margin-left: 15px;
+
+}
+
+.inspirados{max-width:400px;
+margin-left: 175px;}
+
+.empretienda{
+justify-content: space-evenly;
+justify-items:center;
+align-items: center;
+align-self: stretch;
+border: 1px solid black;
+box-shadow: inset;
+flex-direction: column;
+gap: 1.5rem;  
+}
+
+
+.empretienda img{
+width: 200px;
+height: auto;
+margin-top: auto;
+ 
+      
+     
+      box-shadow:0 8px 16px rgba(0,0,0,.25);
+}
+
+.Entrevistador{
+  margin-top: 40px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: white;
+        max-width: 50%;
+        max-height: 50%;
+        margin-left: 150px;
+}
+
+.noel{margin-top: 90px;}
+
+.whatsthestory{height: 50%; width: 50%;}
+}
+
+/*era hasta aca */
+
+@media (max-width: 480px){
+
+
+.header{
+height: 15px;
+width: 10px;
+background-color: #000;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.tituloh1{font-size: 25px;
+margin-right: 5px;
+}
+
+
+.nav {
+    background: #000;
+    display: flex
+;justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    justify-content: space-evenly;
+    
+}
+
+
+.nav-links {
+  font-size: 10px;
+    display: flex;
+    gap: 10px;}
+
+
+    .nav-links li {
+    display: inline;
+font-size: 10px;
+
+}
+
+.nav-links a{
+  font-size: 13.5px;
+  margin-left: 12px;
+}
+
+
+.tituloh2{
+margin-left: 40px;
+justify-content: center;
+align-items: center;
+display: flex;
+
+}
+
+.tituloh2 h2{
+justify-content: center;
+align-items: center;
+display: flex;
+margin-left: -10px;
+
+
+}
+
+
+.inspirados{max-width:400px;
+margin-left: 95px;}
+
+.empretienda{
+justify-content: space-evenly;
+justify-items:center;
+align-items: center;
+align-self: stretch;
+border: 1px solid black;
+box-shadow: inset;
+flex-direction: column;
+gap: 1.5rem;  
+margin-left: 10px;
+}
+
+
+.empretienda img{
+width: 200px;
+height: auto;
+margin-top: auto;
+ 
+      
+     
+      box-shadow:0 8px 16px rgba(0,0,0,.25);
+}
+
+.oasises{
+max-width: 500px;
+justify-content: center;
+align-items: center;
+display: flex;
+
+}
+
+
+
+.texto-inicial{
+width: 85%;
+height: 2%;
+justify-content: center;
+align-items: center;
+display: flex;
+
+
+}
+
+
+.video{
+justify-content: center;
+align-items: center;
+display: flex;
+
+
+
+}
+
+
+.Entrevistador{
+  margin-top: 40px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: white;
+        max-width: 50%;
+        max-height: 50%;
+        margin-left: 110px;
+}
+
+.noel{margin-top: 90px;}
+
+.whatsthestory{height: 50%; width: 50%;}
+}
+
+
+
+  
+
+
+
+
+
+ 
